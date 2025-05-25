@@ -2,6 +2,7 @@ package pl.wsb.fitnesstracker.training.api;
 
 import pl.wsb.fitnesstracker.user.api.User;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface TrainingProvider {
@@ -15,4 +16,13 @@ public interface TrainingProvider {
      */
     Optional<User> getTraining(Long trainingId);
 
+    List<Training> findTrainingsByUserId();
+
+    List<Training> findTrainingsAfterDate();
+
+    List<Training> findTrainingsByActivity();
+
+    Training createTraining(Training training);
+
+    Training updateTraining(Training training);
 }
